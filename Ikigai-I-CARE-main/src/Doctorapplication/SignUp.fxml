@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="border_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #B4D4FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Doctorapplication.DoctorSignupController">
+   <left>
+      <AnchorPane prefHeight="700.0" prefWidth="546.0" style="-fx-background-color: #176B87;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="352.0" fitWidth="384.0" layoutX="30.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="89.0" layoutY="368.0" style="-fx-font-color: black;" text="Hello," textFill="#fffcfc">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="417.0" text="Create Account" textFill="#fcf8f8">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="490.0" text="Access Your Care Network Anytime, Anywhere" textFill="WHITE">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="700.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="164.0" layoutY="455.0" text="Text">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="163.0" layoutY="305.0" text="Email">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ispassword" layoutX="163.0" layoutY="476.0" prefHeight="40.0" prefWidth="250.0" promptText="password" />
+            <TextField fx:id="email" layoutX="162.0" layoutY="327.0" prefHeight="40.0" prefWidth="250.0" promptText="email" style="-fx-border-radius: 5px;" />
+            <Label layoutX="219.0" layoutY="56.0" prefHeight="83.0" prefWidth="136.0" text="Sign Up">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="signupBtn" layoutX="163.0" layoutY="549.0" mnemonicParsing="false" onAction="#signup" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #176B87;" text="Sign up" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Button>
+            <Label layoutX="162.0" layoutY="380.0" text="Phone no.">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneno" layoutX="163.0" layoutY="401.0" prefHeight="40.0" prefWidth="250.0" promptText="phone number" style="-fx-border-radius: 5px;" />
+            <Label layoutX="163.0" layoutY="159.0" text="First Name">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="f_name" layoutX="163.0" layoutY="180.0" prefHeight="40.0" prefWidth="250.0" promptText="fisrt name" style="-fx-border-radius: 5px;" />
+            <Label layoutX="162.0" layoutY="232.0" text="Last Name">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="l_name" layoutX="162.0" layoutY="255.0" prefHeight="40.0" prefWidth="250.0" promptText="last name" style="-fx-border-radius: 5px;" />
+         </children></AnchorPane>
+   </center>
+</BorderPane>
