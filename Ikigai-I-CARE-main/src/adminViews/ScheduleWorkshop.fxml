@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminControllers.ScheduleWorkshopController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="277.0" layoutY="138.0" prefHeight="700.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="91.0" prefWidth="1100.0" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-5.0" prefHeight="96.0" prefWidth="200.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css">
+                           <children>
+                              <Label layoutX="92.0" layoutY="34.0" text="IKIGAI" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="myImageView" fitHeight="90.0" fitWidth="93.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
+                                 <image>
+                                    <Image url="@../application/images/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="211.0" layoutY="28.0" prefHeight="18.0" prefWidth="262.0" styleClass="header-1" stylesheets="@MainFormDesign.css" text="Schedule Workshop" AnchorPane.leftAnchor="211.0" AnchorPane.topAnchor="28.0">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="logOutButton" layoutX="994.0" layoutY="23.0" mnemonicParsing="false" onAction="#medicalSupplyRequest" prefHeight="40.0" prefWidth="67.0" style="-fx-background-color: #176B87;" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Log Out" AnchorPane.rightAnchor="39.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="border-top" />
+                     </styleClass>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="617.0" prefWidth="200.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="617.0" prefWidth="200.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css">
+                           <children>
+                              <AnchorPane prefHeight="617.0" prefWidth="200.0" styleClass="bg-color-1" stylesheets="@MainFormDesign.css">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="212.0" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="homeButton" layoutX="11.0" layoutY="114.0" mnemonicParsing="false" onAction="#homePage" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Home Page">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="doctorManagementButton" layoutX="11.0" layoutY="172.0" mnemonicParsing="false" onAction="#viewDoctorManagement" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Doctor Management">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="inventoryButton" layoutX="11.0" layoutY="337.0" mnemonicParsing="false" onAction="#viewInventory" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Inventory">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="scheduleWorkshopButton" layoutX="11.0" layoutY="284.0" mnemonicParsing="false" onAction="#scheduleWorkshop" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Schedule Workshops">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="scheduleShiftButton" layoutX="11.0" layoutY="231.0" mnemonicParsing="false" onAction="#shiftSchedule" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="Schedule Shift">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="supplyRequestButton" layoutX="11.0" layoutY="388.0" mnemonicParsing="false" onAction="#medicalSupplyRequest" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text=" Supply Request">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="180.0" prefHeight="608.0" prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="workshopScheduleTableView" layoutX="7.0" layoutY="151.0" prefHeight="325.0" prefWidth="688.0" stylesheets="@MainFormDesign.css" AnchorPane.bottomAnchor="141.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="205.0" AnchorPane.topAnchor="151.0">
+                                <columns>
+                                    <TableColumn fx:id="adminCol" prefWidth="109.5" text="Arraged by Admin" />
+                                    <TableColumn fx:id="workshopNameCol" prefWidth="110.5" text="Workshop Name" />
+                                    <TableColumn fx:id="workshopSpeakerCol" prefWidth="60.5" text="Speaker" />
+                                    <TableColumn fx:id="workshopDescriptionCol" minWidth="8.0" prefWidth="137.0" text="Description" />
+                                    <TableColumn fx:id="workshopDateCol" prefWidth="63.5" text="Date" />
+                                    <TableColumn fx:id="startTimeCol" prefWidth="60.0" text="Start Time" />
+                                    <TableColumn fx:id="endTimeCol" prefWidth="73.5" text="End Time" />
+                                    <TableColumn fx:id="venueCol" prefWidth="94.5" text="Venue" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 
+                              </TableView>
+                              <Label fx:id="workshopLabel" layoutX="14.0" layoutY="50.0" prefHeight="18.0" prefWidth="262.0" styleClass="header-1" stylesheets="@MainFormDesign.css" text="Workshop Schedule">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchTextField" layoutX="14.0" layoutY="94.0" prefHeight="30.0" prefWidth="516.0" promptText="Search" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="370.0" />
+                              <AnchorPane layoutX="702.0" layoutY="2.0" prefHeight="608.0" prefWidth="199.0" style="-fx-background-color: #176B87;" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+                                 <children>
+                                    <Label layoutX="16.0" layoutY="47.0" text="Enter Details to" textFill="WHITE" AnchorPane.bottomAnchor="534.0" AnchorPane.rightAnchor="52.5" AnchorPane.topAnchor="47.0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="81.0" text="Schedule Workshop" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="204.0" text="Enter Workshop Description" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="confirmWorkshopButton" layoutX="11.0" layoutY="540.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="178.0" styleClass="nav-btn-1" stylesheets="@MainFormDesign.css" text="       Confirm Schedule" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="workshopDescTextField" layoutX="12.0" layoutY="229.0" prefHeight="36.0" prefWidth="178.0" />
+                                    <Label layoutX="16.0" layoutY="139.0" text="Enter Workshop Name" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="workshopNameTextField" layoutX="11.0" layoutY="164.0" prefHeight="33.0" prefWidth="178.0" />
+                                    <DatePicker fx:id="datePicker" layoutX="12.0" layoutY="349.0" prefHeight="30.0" prefWidth="178.0" promptText="Select Date" />
+                                    <Label layoutX="14.0" layoutY="379.0" text="Start Time" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="17.0" layoutY="432.0" text="End Time" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="startTimePicker" layoutX="16.0" layoutY="398.0" prefWidth="170.0" promptText="Shift Start Time " />
+                                    <ComboBox fx:id="endTimePicker" layoutX="16.0" layoutY="451.0" prefWidth="170.0" promptText="Shift End Time" />
+                                    <Label layoutX="20.0" layoutY="476.0" text="Venue" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="venuePicker" layoutX="15.0" layoutY="495.0" prefWidth="170.0" promptText="Select Venue" />
+                                    <Label layoutX="11.0" layoutY="277.0" text="Enter Workshop Speaker" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="workshopSpeakerTextField" layoutX="12.0" layoutY="296.0" prefHeight="36.0" prefWidth="178.0" />
+                                 </children>
+                              </AnchorPane>
+                              <ComboBox fx:id="searchComboBox" layoutX="538.0" layoutY="97.0" prefHeight="25.0" prefWidth="137.0" promptText="Search By" AnchorPane.rightAnchor="225.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
