@@ -132,7 +132,7 @@ Before installation, ensure the following are installed:
 
 #### 1. Clone the Repository
 ```bash
-git clone (https://github.com/povsalman/Ikigai-Hospital-Management-System.git)
+git clone https://github.com/povsalman/Ikigai-Hospital-Management-System.git
 ```
 
 #### 2. Database Setup
